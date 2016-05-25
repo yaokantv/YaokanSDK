@@ -47,25 +47,26 @@ YaokanSDK could easily support 10+ device platforms in the world for third-party
 
 ### <a id="configuration"></a>配置项目
 
-  仅适用于 `iOS 9` 及以上版本，将 Yaokan 服务器添加到白名单：
+  * 仅适用于 `iOS 9` 及以上版本，将 Yaokan 服务器添加到白名单：
+
   ```objc
   <key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>www.yaokantv.com</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
-				<false/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-		</dict>
-	</dict>
+  <dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+      <key>www.yaokantv.com</key>
+      <dict>
+        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+        <true/>
+        <key>NSExceptionRequiresForwardSecrecy</key>
+        <false/>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+        <false/>
+      </dict>
+    </dict>
+  </dict>
   ```
 
 ### <a id="integration"></a>功能集成
