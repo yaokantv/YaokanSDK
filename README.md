@@ -70,9 +70,9 @@ YaokanSDK could easily support 10+ device platforms in the world for third-party
 
 ### <a id="integration"></a>功能集成
 1. 导入头文件
-```objc
-#import <YaokanSDK/YaokanSDK.h>
-```
+  ```objc
+  #import <YaokanSDK/YaokanSDK.h>
+  ```
 
 2. 使用 [注册应用](#create_app_id) 中注册到的 `AppKey` 和 `Secret` 向服务器注册：
 
@@ -86,27 +86,27 @@ YaokanSDK could easily support 10+ device platforms in the world for third-party
   ```
 
 3. 创建遥控器
-```objc
-[YaokanSDK startCreateDeviceIn:self.navigationController
-                    withCompletion:^(NSArray *obj, NSError *error) {
-                        self.devices = [NSMutableArray arrayWithArray:obj];
-                        [self.tableView reloadData];
-                    }];
-```
+  ```objc
+  [YaokanSDK startCreateDeviceIn:self.navigationController
+                      withCompletion:^(NSArray *obj, NSError *error) {
+                          self.devices = [NSMutableArray arrayWithArray:obj];
+                          [self.tableView reloadData];
+                      }];
+  ```
 
 4. 获取创建的遥控器列表
-```objc
-[YaokanSDK fetchDeviceList:^(NSArray *obj, NSError *error) {
-        self.devices = [NSMutableArray arrayWithArray:obj];
-        [self.tableView reloadData];
-    }];
-```
+  ```objc
+  [YaokanSDK fetchDeviceList:^(NSArray *obj, NSError *error) {
+          self.devices = [NSMutableArray arrayWithArray:obj];
+          [self.tableView reloadData];
+      }];
+  ```
 
 5. 进入遥控器界面
-```objc
-// self 的父类容器必须有 UINavigationController
-[YaokanSDK openDevicePannelIn:self withDevice:device];
-```
+  ```objc
+  // self 的父类容器必须有 UINavigationController
+  [YaokanSDK openDevicePannelIn:self withDevice:device];
+  ```
 
 6. 删除遥控器
   ```objc
