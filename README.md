@@ -45,6 +45,8 @@ YaokanSDK could easily support 10+ device platforms in the world for third-party
 
     在 Build Settings 中找到 `Other Linker Flags`，添加 `-all_load`。
 
+  4. 添加第三方资源包 `SVProgressHUD.bundle`，方法同步骤 `1`。
+
 ### <a id="configuration"></a>配置项目
 
   * 仅适用于 `iOS 9` 及以上版本，将 Yaokan 服务器添加到白名单：
@@ -84,6 +86,14 @@ YaokanSDK could easily support 10+ device platforms in the world for third-party
          //……
          return YES;
   }
+  ```
+
+2. 设置发码回调方法：
+
+  ```objc
+  [YaokanSDK setBlockOnSendRemoteValue:^(NSString *value) {
+      YKLog(@"remote value:%@", value);
+  }];
   ```
 
 3. 创建遥控器
